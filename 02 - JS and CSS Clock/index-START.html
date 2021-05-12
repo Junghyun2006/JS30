@@ -65,7 +65,7 @@
       transform-origin: 100%;
       transform: rotate(90deg);
       transition: all 0.5s;
-      transition-timing-function: cubic-bezier(0, 1.63, 0.25, 1);
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
     }
 
   </style>
@@ -87,7 +87,7 @@
 
       secondHand.style.transform = `rotate(${secondsDegree}deg)`
       minuteHand.style.transform = `rotate(${minutesDegree}deg)`
-      hourHand.style.transform = `rotate(${hoursDegree}deg)`
+      // hourHand.style.transform = `rotate(${hoursDegree}deg)`
     }
     
     setInterval(setDate, 1000);
