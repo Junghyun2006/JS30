@@ -21,6 +21,7 @@
   <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
 
   <style>
+    /* setting variables at the root level */
     :root {
       --base: #ffc600;
       --spacing: 10px;
@@ -43,7 +44,7 @@
     body {
       text-align: center;
       background: #193549;
-      color: white;
+      color: var(--base);
       font-family: 'helvetica neue', sans-serif;
       font-weight: 100;
       font-size: 50px;
@@ -59,11 +60,11 @@
   </style>
 
   <script>
-    const inputs = document.querySelectorAll('.controls input');
+    const inputs = document.querySelectorAll('.controls input'); // select inputs under control classes.
 
     function handleUpdate() {
       const suffix = this.dataset.sizing || '';
-      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix); //set css properties for the selected property.
 
     }
 
